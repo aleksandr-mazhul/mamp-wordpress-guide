@@ -1,25 +1,29 @@
 # Скриншоты гайда
 
-## Часть 1 — Локальная установка
+## Часть 1 — `local/`
 
 | Папка | Файлы | Раздел |
 |-------|-------|--------|
-| `03-configure-mamp/` | `mamp-main-window.png`, `mamp-ports-settings.png`, `mamp-server-htdocs.png` | [03-configure-mamp.md](../../docs/03-configure-mamp.md) |
-| `04-create-database/` | `mamp-webstart-phpmyadmin.png`, `phpmyadmin-new.png`, `create-database.png` | [04-create-database.md](../../docs/04-create-database.md) |
-| `05-install-wordpress/` | `wp-db-config.png`, `wp-run-install.png` | [05-install-wordpress.md](../../docs/05-install-wordpress.md) |
-| `06-first-launch/` | `wp-site-info.png`, `wp-install-success.png` | [06-first-launch.md](../../docs/06-first-launch.md) |
+| `local/03-configure-mamp/` | `mamp-main-window.png`, `mamp-ports-settings.png`, `mamp-server-htdocs.png` | [02-mamp.md](../../docs/local/02-mamp.md) |
+| `local/04-create-database/` | `mamp-webstart-phpmyadmin.png`, `phpmyadmin-new.png`, `create-database.png` | [03-wordpress.md](../../docs/local/03-wordpress.md) |
+| `local/05-install-wordpress/` | `wp-db-config.png`, `wp-run-install.png` | [03-wordpress.md](../../docs/local/03-wordpress.md) |
+| `local/06-first-launch/` | `wp-site-info.png`, `wp-install-success.png` | [03-wordpress.md](../../docs/local/03-wordpress.md) |
 
-## Часть 2 — Перенос на хостинг
+## Часть 2 — `migrate/`
 
-Скриншоты пока в виде `<!-- TODO -->` в markdown. Планируемые файлы:
+Скриншоты хостинга — в разработке. Планируемые папки:
 
 | Папка | Файлы | Раздел |
 |-------|-------|--------|
-| `deploy/01-prerequisites/` | `hosting-ftp-credentials.png`, `hosting-panel-overview.png` | [deploy/01-prerequisites.md](../../docs/deploy/01-prerequisites.md) |
-| `deploy/04-export-database/` | `phpmyadmin-export.png` | [deploy/04-export-database.md](../../docs/deploy/04-export-database.md) |
-| `deploy/05-upload-files/` | `file-manager-upload.png`, `filezilla-connect.png`, `filezilla-transfer.png` | [deploy/05-upload-files.md](../../docs/deploy/05-upload-files.md) |
-| `deploy/06-create-remote-database/` | `create-mysql-database.png` | [deploy/06-create-remote-database.md](../../docs/deploy/06-create-remote-database.md) |
-| `deploy/07-import-database/` | `phpmyadmin-import.png` | [deploy/07-import-database.md](../../docs/deploy/07-import-database.md) |
-| `deploy/08-wp-config-and-urls/` | `edit-wp-config.png`, `better-search-replace.png` | [deploy/08-wp-config-and-urls.md](../../docs/deploy/08-wp-config-and-urls.md) |
+| `migrate/01-prerequisites/` | `hosting-panel-overview.png` | [01-prepare.md](../../docs/migrate/01-prepare.md) |
+| `migrate/04-export-database/` | `phpmyadmin-export.png` | [01-prepare.md](../../docs/migrate/01-prepare.md) |
+| `migrate/05-upload-files/` | `file-manager-upload.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
+| `migrate/06-create-remote-database/` | `create-mysql-database.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
+| `migrate/07-import-database/` | `phpmyadmin-import.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
+| `migrate/08-wp-config-and-urls/` | `edit-wp-config.png`, `better-search-replace.png` | [03-configure.md](../../docs/migrate/03-configure.md) |
+
+## Часть 3 — `hosting/`
+
+Пока пусто.
 
 При добавлении: PNG, ширина до 1200px, kebab-case.
