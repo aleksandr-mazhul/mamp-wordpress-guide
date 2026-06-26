@@ -1,20 +1,18 @@
-# Локальный WordPress на macOS через MAMP
+# WordPress на macOS: локально и в интернете
 
 ![macOS](https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white)
 ![MAMP Free](https://img.shields.io/badge/MAMP-Free-3D8FC6?style=flat)
 ![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)
 
-> Пошаговый гайд: от установки MAMP до первого работающего сайта на WordPress.
-
-Этот репозиторий — подробная инструкция для запуска WordPress локально на Mac. Никакого хостинга и домена не нужно: всё работает прямо на вашем компьютере через **MAMP Free**.
-
-![WordPress установлен](assets/images/06-first-launch/wp-install-success.png)
-
-*Рис. 1 — Итоговый результат: WordPress успешно установлен*
+> Два пошаговых гайда: поднять WordPress на Mac через MAMP и перенести готовый сайт на хостинг.
 
 ---
 
-## Быстрый старт
+## Часть 1: Локальная установка (MAMP)
+
+Установите WordPress на Mac — без хостинга и домена. Всё работает через **MAMP Free**.
+
+![WordPress установлен](assets/images/06-first-launch/wp-install-success.png)
 
 | Шаг | Действие | Раздел |
 |-----|----------|--------|
@@ -25,101 +23,58 @@
 | 5 | Установить WordPress | [docs/05-install-wordpress.md](docs/05-install-wordpress.md) |
 | 6 | Войти в админку | [docs/06-first-launch.md](docs/06-first-launch.md) |
 
+**Проблемы с MAMP:** [docs/99-troubleshooting.md](docs/99-troubleshooting.md)
+
 ---
 
-## Видеоматериал
+## Часть 2: Перенос на хостинг
 
-Если удобнее смотреть, а не читать — есть видео по той же теме:
+Перенесите **уже готовый** локальный сайт в интернет — универсальный ручной алгоритм + альтернатива через плагин.
+
+**[Начать часть 2 →](docs/deploy/README.md)**
+
+| Шаг | Действие | Раздел |
+|-----|----------|--------|
+| 1 | Подготовка | [docs/deploy/01-prerequisites.md](docs/deploy/01-prerequisites.md) |
+| 2 | Выбор хостинга | [docs/deploy/02-choose-hosting.md](docs/deploy/02-choose-hosting.md) |
+| 3 | Бэкап локального сайта | [docs/deploy/03-backup-local.md](docs/deploy/03-backup-local.md) |
+| 4 | Экспорт базы данных | [docs/deploy/04-export-database.md](docs/deploy/04-export-database.md) |
+| 5 | Загрузка файлов | [docs/deploy/05-upload-files.md](docs/deploy/05-upload-files.md) |
+| 6 | База на хостинге | [docs/deploy/06-create-remote-database.md](docs/deploy/06-create-remote-database.md) |
+| 7 | Импорт SQL | [docs/deploy/07-import-database.md](docs/deploy/07-import-database.md) |
+| 8 | wp-config и замена URL | [docs/deploy/08-wp-config-and-urls.md](docs/deploy/08-wp-config-and-urls.md) |
+| 9 | Финальная проверка | [docs/deploy/09-final-check.md](docs/deploy/09-final-check.md) |
+
+**Альтернатива (плагин):** [docs/deploy/10-alternative-plugin.md](docs/deploy/10-alternative-plugin.md)
+
+**Проблемы при переносе:** [docs/deploy/99-troubleshooting.md](docs/deploy/99-troubleshooting.md)
+
+---
+
+## Часть 3 (планируется)
+
+Установка WordPress **сразу на хостинге** без MAMP — отдельный гайд.
+
+---
+
+## Видеоматериал (часть 1)
 
 **[Установка WordPress на MAMP (YouTube)](https://www.youtube.com/watch?v=OwnwrO6Ub28&t=1s)**
 
-Текстовый гайд в этом репозитории дополняет видео: здесь есть пояснения «почему именно так», таблицы и решение типичных проблем.
-
-> В видео порты могут отличаться (`8888` / `8889`) — в этом гайде используются **`80`** и **`3306`**. Ориентируйтесь на текст ниже.
+> В видео порты могут отличаться (`8888` / `8889`) — в части 1 используются **`80`** и **`3306`**.
 
 ---
 
-## Что понадобится
-
-- **macOS** 12 Monterey или новее (Apple Silicon или Intel)
-- **~500 МБ** свободного места на диске
-- **Браузер** (Safari, Chrome, Firefox — любой)
-- **Интернет** — для скачивания MAMP и WordPress
-
----
-
-## Как устроен процесс
-
-```mermaid
-flowchart LR
-    subgraph prep [Подготовка]
-        A[Скачать MAMP]
-        B[Скачать WordPress]
-    end
-    subgraph mamp [Настройка MAMP]
-        C[Apache + PHP]
-        D["Порты 80 и 3306"]
-        E[Открыть htdocs]
-    end
-    subgraph db [База данных]
-        F[Start серверов]
-        G[phpMyAdmin]
-        H[Создать БД]
-    end
-    subgraph wp [WordPress]
-        I[Распаковать в htdocs]
-        J[Мастер установки]
-        K[Войти в админку]
-    end
-    A --> C --> D --> E
-    B --> I
-    E --> F --> G --> H
-    H --> J
-    I --> J --> K
-```
-
----
-
-## Оглавление
-
-| № | Раздел | Описание |
-|---|--------|----------|
-| 01 | [Подготовка](docs/01-prerequisites.md) | Ссылки на скачивание, видео, что понадобится |
-| 02 | [Установка MAMP](docs/02-install-mamp.md) | Скачивание и установка MAMP Free |
-| 03 | [Настройка MAMP](docs/03-configure-mamp.md) | Apache, PHP, порты 80/3306, папка htdocs |
-| 04 | [База данных](docs/04-create-database.md) | Запуск серверов, phpMyAdmin, создание БД |
-| 05 | [Установка WordPress](docs/05-install-wordpress.md) | Распаковка файлов, подключение к БД |
-| 06 | [Первый запуск](docs/06-first-launch.md) | Завершение установки и вход в админку |
-| 99 | [Решение проблем](docs/99-troubleshooting.md) | Частые ошибки и их исправление |
-
----
-
-## Важные параметры
-
-Эти значения используются на протяжении всего гайда:
+## Параметры локальной установки (часть 1)
 
 | Параметр | Значение |
 |----------|----------|
 | Сайт | `http://localhost/название-вашей-папки/` |
-| Apache (веб-сервер) | порт `80` |
-| MySQL (база данных) | порт `3306` |
+| Apache | порт `80` |
+| MySQL | порт `3306` |
 | phpMyAdmin | `http://localhost/phpMyAdmin/` |
-| Папка сайтов (htdocs) | `/Applications/MAMP/htdocs/` |
-| Логин MySQL | `root` |
-| Пароль MySQL | `root` |
-| Database Host в WordPress | `localhost` |
-
----
-
-## Частые проблемы
-
-Столкнулись с ошибкой? Загляните в [docs/99-troubleshooting.md](docs/99-troubleshooting.md) — там собраны типичные ситуации, в том числе если порт 80 или 3306 уже занят.
-
----
-
-## Следующий этап
-
-Перенос сайта на внешний сервер — гайд по деплою в разработке.
+| htdocs | `/Applications/MAMP/htdocs/` |
+| MySQL | `root` / `root` |
 
 ---
 
