@@ -73,8 +73,8 @@ FTP через FileZilla — [appendix-ftp.md](appendix-ftp.md)
 | Симптом | Куда |
 |---------|------|
 | Сайт в подпапке `/wordpress/` | Переместите файлы на уровень выше |
-| SQL слишком большой | [troubleshooting.md#импорт-sql-файл-слишком-большой](troubleshooting.md#импорт-sql-файл-слишком-большой) |
-| Ошибка БД после импорта | [troubleshooting.md#error-establishing-a-database-connection](troubleshooting.md#error-establishing-a-database-connection) |
+| SQL слишком большой | [troubleshooting.md#sql-too-large](troubleshooting.md#sql-too-large) |
+| Ошибка БД после импорта | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
 
 ---
 

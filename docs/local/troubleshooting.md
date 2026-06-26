@@ -19,6 +19,8 @@ flowchart TD
 
 ---
 
+<a id="port-80"></a>
+
 ## Port 80 занят
 
 **Симптом:** MAMP не запускает Apache — порт `80` занят.
@@ -33,6 +35,8 @@ flowchart TD
 
 ---
 
+<a id="port-3306"></a>
+
 ## Порт 3306 занят
 
 **Симптом:** MySQL не стартует.
@@ -44,6 +48,8 @@ flowchart TD
 3. В WordPress укажите `localhost:8889` вместо `localhost`
 
 ---
+
+<a id="db-connection"></a>
 
 ## Error establishing a database connection
 
@@ -65,6 +71,8 @@ define( 'DB_HOST', 'localhost' );
 
 ---
 
+<a id="page-404"></a>
+
 ## Страница не найдена (404)
 
 1. Папка в `/Applications/MAMP/htdocs/`
@@ -73,6 +81,8 @@ define( 'DB_HOST', 'localhost' );
 4. Apache запущен
 
 ---
+
+<a id="white-screen"></a>
 
 ## Белый экран
 
@@ -83,14 +93,18 @@ define( 'DB_HOST', 'localhost' );
 
 ---
 
+<a id="apache-wont-start"></a>
+
 ## Apache не стартует
 
-1. Порт 80 (см. выше)
+1. Порт 80 (см. [выше](#port-80))
 2. Закройте Docker и другие веб-серверы
 3. Перезагрузите Mac
 4. Лог: `/Applications/MAMP/logs/apache_error.log`
 
 ---
+
+<a id="phpmyadmin"></a>
 
 ## phpMyAdmin не открывается
 
@@ -100,6 +114,8 @@ define( 'DB_HOST', 'localhost' );
 4. Порт Apache = `80`
 
 ---
+
+<a id="no-styles"></a>
 
 ## Сайт без стилей
 

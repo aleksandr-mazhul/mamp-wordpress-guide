@@ -69,8 +69,8 @@ flowchart LR
 
 | Симптом | Куда |
 |---------|------|
-| Ошибка соединения с БД | [troubleshooting.md#error-establishing-a-database-connection](troubleshooting.md#error-establishing-a-database-connection) |
-| Редирект на localhost | [troubleshooting.md#сайт-перенаправляет-на-localhost](troubleshooting.md#сайт-перенаправляет-на-localhost) |
+| Ошибка соединения с БД | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
+| Редирект на localhost | [troubleshooting.md#localhost-redirect](troubleshooting.md#localhost-redirect) |
 | Битые картинки | Повторите Search Replace; проверьте `wp-content/uploads` |
 
 ---

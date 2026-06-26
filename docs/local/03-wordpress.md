@@ -10,6 +10,9 @@
 
 1. В MAMP нажмите **Start** — Apache и MySQL зелёные
 2. Откройте `http://localhost/MAMP/` → MySQL → **phpMyAdmin**
+
+![WebStart — phpMyAdmin](../../assets/images/local/04-create-database/mamp-webstart-phpmyadmin.png)
+
 3. Слева **New** → имя базы (например `wordpress`) → кодировка `utf8mb4_unicode_ci` → **Create**
 
 ![phpMyAdmin — New](../../assets/images/local/04-create-database/phpmyadmin-new.png)
@@ -89,9 +92,9 @@ flowchart TB
 
 | Симптом | Куда |
 |---------|------|
-| Ошибка соединения с БД | [troubleshooting.md#error-establishing-a-database-connection](troubleshooting.md#error-establishing-a-database-connection) |
-| 404 на сайте | [troubleshooting.md#страница-не-найдена-404](troubleshooting.md#страница-не-найдена-404) |
-| phpMyAdmin не открывается | [troubleshooting.md#phpmyadmin-не-открывается](troubleshooting.md#phpmyadmin-не-открывается) |
+| Ошибка соединения с БД | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
+| 404 на сайте | [troubleshooting.md#page-404](troubleshooting.md#page-404) |
+| phpMyAdmin не открывается | [troubleshooting.md#phpmyadmin](troubleshooting.md#phpmyadmin) |
 
 ---
 

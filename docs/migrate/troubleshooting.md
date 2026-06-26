@@ -15,6 +15,8 @@ flowchart TD
 
 ---
 
+<a id="db-connection"></a>
+
 ## Error establishing a database connection
 
 Проверьте `wp-config.php` на сервере:
@@ -27,6 +29,8 @@ flowchart TD
 | DB_HOST | `localhost` по привычке с MAMP — **возьмите из панели** |
 
 ---
+
+<a id="localhost-redirect"></a>
 
 ## Сайт перенаправляет на localhost
 
@@ -43,6 +47,8 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 
 ---
 
+<a id="permalinks-404"></a>
+
 ## 404 на всех страницах кроме главной
 
 1. Настройки → Постоянные ссылки → **Сохранить**
@@ -50,12 +56,16 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 
 ---
 
+<a id="broken-images"></a>
+
 ## Битые картинки
 
 - Повторите Better Search Replace
 - Проверьте `wp-content/uploads` на сервере
 
 ---
+
+<a id="sql-too-large"></a>
 
 ## Импорт SQL: файл слишком большой
 
@@ -65,6 +75,8 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 
 ---
 
+<a id="white-screen"></a>
+
 ## Белый экран
 
 1. `WP_DEBUG` и `WP_DEBUG_DISPLAY` в `wp-config.php`
@@ -72,6 +84,8 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 3. Логи в панели хостинга (Error Log)
 
 ---
+
+<a id="error-500"></a>
 
 ## 500 Internal Server Error
 
@@ -81,12 +95,16 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 
 ---
 
+<a id="mixed-content"></a>
+
 ## Mixed content (HTTP / HTTPS)
 
 1. Настройки → Общие — оба URL с `https://`
 2. Search Replace: `http://домен` → `https://домен`
 
 ---
+
+<a id="ftp-filezilla"></a>
 
 ## Не могу подключиться по FTP (FileZilla)
 

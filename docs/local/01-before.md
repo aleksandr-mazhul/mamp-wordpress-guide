@@ -47,7 +47,7 @@
 
 | Симптом | Куда |
 |---------|------|
-| macOS блокирует MAMP | [troubleshooting.md#apache-не-стартует](troubleshooting.md#apache-не-стартует) |
+| macOS блокирует MAMP | [troubleshooting.md#apache-wont-start](troubleshooting.md#apache-wont-start) |
 
 ---
 

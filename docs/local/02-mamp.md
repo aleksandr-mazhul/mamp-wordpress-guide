@@ -67,9 +67,9 @@ WordPress использует `.htaccess` для красивых ссылок 
 
 | Симптом | Куда |
 |---------|------|
-| Порт 80 занят | [troubleshooting.md#port-80-занят](troubleshooting.md#port-80-занят) |
-| Порт 3306 занят | [troubleshooting.md#порт-3306-занят](troubleshooting.md#порт-3306-занят) |
-| Apache не стартует | [troubleshooting.md#apache-не-стартует](troubleshooting.md#apache-не-стартует) |
+| Порт 80 занят | [troubleshooting.md#port-80](troubleshooting.md#port-80) |
+| Порт 3306 занят | [troubleshooting.md#port-3306](troubleshooting.md#port-3306) |
+| Apache не стартует | [troubleshooting.md#apache-wont-start](troubleshooting.md#apache-wont-start) |
 
 ---
 
