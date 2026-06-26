@@ -11,7 +11,7 @@
 ```
 docs/local/     — Часть 1 (Mac + MAMP)
 docs/migrate/   — Часть 2 (перенос)
-docs/hosting/   — Часть 3 (в разработке)
+docs/hosting/   — Часть 3 (установка на хостинге)
 ```
 
 Скриншоты — в `assets/images/<часть>/`. См. [assets/images/README.md](assets/images/README.md).
@@ -23,7 +23,8 @@ docs/hosting/   — Часть 3 (в разработке)
 ```markdown
 # NN. Заголовок
 
-[навигация]
+Вы здесь: [Часть N](README.md) · **Шаг X из M** · [← Назад](prev.md) · [Далее →](next.md)
+Если ошибка → [troubleshooting.md](troubleshooting.md)
 
 ---
 

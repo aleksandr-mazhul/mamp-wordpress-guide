@@ -4,39 +4,37 @@
 
 ```mermaid
 flowchart LR
-    A[Скачать] --> B[MAMP]
-    B --> C[База данных]
-    C --> D[WordPress]
-    D --> E[Админка]
+    A[Шаг 1: Скачать] --> B[Шаг 2: MAMP]
+    B --> C[Шаг 3: WordPress]
+    C --> D[Админка]
 ```
+
+---
+
+## Маршрут
+
+| Шаг | Файл | Содержание |
+|-----|------|------------|
+| 1 | [01-before.md](01-before.md) | Скачивание MAMP и WordPress |
+| 2 | [02-mamp.md](02-mamp.md) | Установка и настройка MAMP |
+| 3 | [03-wordpress.md](03-wordpress.md) | БД, установка WP, первый вход |
+| — | [troubleshooting.md](troubleshooting.md) | Ошибки MAMP и WordPress |
+
+**[Начать шаг 1 →](01-before.md)**
 
 ---
 
 ## Чеклист за 10 минут
 
-1. Скачать [MAMP Free](https://www.mamp.info/ru/downloads/) и [WordPress](https://ru.wordpress.org/download/) → [01-before.md](01-before.md)
-2. Установить MAMP → [01-before.md](01-before.md)
-3. Apache, порты `80` / `3306`, папка htdocs → [02-mamp.md](02-mamp.md)
-4. Start в MAMP, создать базу в phpMyAdmin → [03-wordpress.md](03-wordpress.md)
-5. Распаковать WordPress в htdocs → [03-wordpress.md](03-wordpress.md)
-6. Подключить базу, запустить установку → [03-wordpress.md](03-wordpress.md)
-7. Войти в админку → [03-wordpress.md](03-wordpress.md)
+1. Скачать MAMP и WordPress → [01-before.md](01-before.md)
+2. Установить и настроить MAMP → [02-mamp.md](02-mamp.md)
+3. База, установка, вход в админку → [03-wordpress.md](03-wordpress.md)
 
 **Проблемы:** [troubleshooting.md](troubleshooting.md)
 
 ---
 
-## Шаги
-
-| Шаг | Файл | Содержание |
-|-----|------|------------|
-| 1 | [01-before.md](01-before.md) | Скачивание, требования |
-| 2 | [02-mamp.md](02-mamp.md) | Установка и настройка MAMP |
-| 3 | [03-wordpress.md](03-wordpress.md) | БД, установка WP, первый вход |
-
----
-
-## Шпаргалка (вся часть 1)
+## Шпаргалка
 
 | Параметр | Значение |
 |----------|----------|
@@ -60,6 +58,5 @@ flowchart LR
 
 ## Дальше
 
-Сайт готов локально → **[Часть 2: перенос на хостинг](../migrate/README.md)**
-
-[Начать: Подготовка →](01-before.md)
+- Сайт на localhost готов → **[Часть 2: перенос](../migrate/README.md)**
+- Сразу в интернет без Mac → **[Часть 3: hosting](../hosting/README.md)**

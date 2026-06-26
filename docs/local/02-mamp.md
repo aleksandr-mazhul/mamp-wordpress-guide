@@ -1,6 +1,7 @@
 # 02. MAMP: установка и настройка
 
-[← Подготовка](01-before.md) | [Часть 1](README.md) | [Далее: WordPress →](03-wordpress.md)
+Вы здесь: [Часть 1](README.md) · **Шаг 2 из 3** · [← Назад](01-before.md) · [Далее →](03-wordpress.md)  
+Если ошибка → [troubleshooting.md](troubleshooting.md)
 
 ---
 
@@ -73,4 +74,4 @@ WordPress использует `.htaccess` для красивых ссылок 
 
 ---
 
-[Далее: WordPress →](03-wordpress.md)
+**[Далее: шаг 3 — WordPress →](03-wordpress.md)**

@@ -15,6 +15,21 @@ flowchart TD
 
 ---
 
+<a id="panel-sections"></a>
+
+## Не нахожу раздел в панели хостинга
+
+**Симптом:** нет MySQL Databases, File Manager или phpMyAdmin.
+
+**Решение:**
+
+1. Ищите похожие названия на русском и английском
+2. Раздел может называться **Databases**, **Files**, **Website** → **Manage**
+3. На бесплатных хостингах phpMyAdmin — кнопка рядом с созданной базой
+4. Поиск по панели (иконка лупы): `mysql`, `file`, `phpmyadmin`
+
+---
+
 <a id="db-connection"></a>
 
 ## Error establishing a database connection
@@ -42,7 +57,7 @@ define( 'WP_SITEURL', 'http://ваш-домен.com' );
 ```
 
 2. Войдите в админку
-3. Better Search Replace — см. [03-configure.md](03-configure.md)
+3. Better Search Replace — см. [05-configure.md](05-configure.md)
 4. Удалите `WP_HOME` и `WP_SITEURL`
 
 ---

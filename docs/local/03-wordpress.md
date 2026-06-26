@@ -1,6 +1,7 @@
 # 03. WordPress: база, установка, вход
 
-[← MAMP](02-mamp.md) | [Часть 1](README.md)
+Вы здесь: [Часть 1](README.md) · **Шаг 3 из 3** · [← Назад](02-mamp.md)  
+Если ошибка → [troubleshooting.md](troubleshooting.md)
 
 ---
 

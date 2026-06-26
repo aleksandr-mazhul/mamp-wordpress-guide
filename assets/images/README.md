@@ -11,19 +11,19 @@
 
 ## Часть 2 — `migrate/`
 
-Скриншоты хостинга — в разработке. Планируемые папки:
-
 | Папка | Файлы | Раздел |
 |-------|-------|--------|
-| `migrate/01-prerequisites/` | `hosting-panel-overview.png` | [01-prepare.md](../../docs/migrate/01-prepare.md) |
-| `migrate/04-export-database/` | `phpmyadmin-export.png` | [01-prepare.md](../../docs/migrate/01-prepare.md) |
-| `migrate/05-upload-files/` | `file-manager-upload.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
-| `migrate/06-create-remote-database/` | `create-mysql-database.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
-| `migrate/07-import-database/` | `phpmyadmin-import.png` | [02-upload-and-db.md](../../docs/migrate/02-upload-and-db.md) |
-| `migrate/08-wp-config-and-urls/` | `edit-wp-config.png`, `better-search-replace.png` | [03-configure.md](../../docs/migrate/03-configure.md) |
+| `migrate/02-hosting/` | `panel-overview.png` *(TODO)* | [02-hosting.md](../../docs/migrate/02-hosting.md) |
+| `migrate/03-upload/` | `file-manager-upload.png` *(TODO)* | [03-upload.md](../../docs/migrate/03-upload.md) |
+| `migrate/04-database/` | `create-mysql-database.png`, `phpmyadmin-import.png` *(TODO)* | [04-database.md](../../docs/migrate/04-database.md) |
+| `migrate/05-configure/` | `edit-wp-config.png`, `better-search-replace.png` *(TODO)* | [05-configure.md](../../docs/migrate/05-configure.md) |
 
 ## Часть 3 — `hosting/`
 
-Пока пусто.
+| Папка | Файлы | Раздел |
+|-------|-------|--------|
+| `hosting/01-account/` | `panel-overview.png` *(TODO)* | [01-account.md](../../docs/hosting/01-account.md) |
+| `hosting/02-database/` | `create-database.png` *(TODO)* | [02-database.md](../../docs/hosting/02-database.md) |
+| `hosting/03-wordpress/` | `wp-install-wizard.png` *(TODO)* | [03-wordpress.md](../../docs/hosting/03-wordpress.md) |
 
 При добавлении: PNG, ширина до 1200px, kebab-case.

@@ -2,36 +2,61 @@
 
 [← К оглавлению репозитория](../../README.md)
 
-**Статус: в разработке**
+Установка WordPress **с нуля** в интернете — без MAMP и без переноса с Mac.
+
+> Есть сайт на `localhost`? → [Часть 2: Migrate](../migrate/README.md)  
+> Хотите сначала потренироваться на Mac? → [Часть 1: Local](../local/README.md)
 
 ---
 
-## Для кого
-
-Установка WordPress **с нуля** на хостинге — без MAMP и без локальной копии. Подходит, если вы сразу хотите сайт в интернете.
+## Маршрут
 
 ```mermaid
 flowchart LR
-    A[Хостинг] --> B[Создать БД]
-    B --> C[Загрузить WP]
-    C --> D[Установка]
+    A[Шаг 1: Аккаунт] --> B[Шаг 2: База данных]
+    B --> C[Шаг 3: WordPress]
+    C --> D[Шаг 4: Запуск]
     D --> E[Сайт онлайн]
 ```
 
 ---
 
-## Что будет внутри
+## Все шаги
 
-| Раздел | Источник |
-|--------|----------|
-| Выбор хостинга | логика из [migrate/01-prepare](../migrate/01-prepare.md) |
-| Создание БД | как в [migrate/02-upload-and-db](../migrate/02-upload-and-db.md) |
-| Установка WordPress | как в [local/03-wordpress](../local/03-wordpress.md) |
-| Первый вход и настройка | новый контент |
+| Шаг | Файл | Содержание |
+|-----|------|------------|
+| 1 | [01-account.md](01-account.md) | Регистрация, панель хостинга |
+| 2 | [02-database.md](02-database.md) | Пустая база MySQL |
+| 3 | [03-wordpress.md](03-wordpress.md) | Загрузка WP, мастер установки |
+| 4 | [04-launch.md](04-launch.md) | Админка, ЧПУ, что записать |
+| — | [troubleshooting.md](troubleshooting.md) | Ошибки |
 
 ---
 
-## Пока что
+## Чеклист за 10 минут
 
-- **Сайт на Mac?** → [Часть 1: Local](../local/README.md)
-- **Уже есть localhost?** → [Часть 2: Migrate](../migrate/README.md)
+1. Аккаунт на хостинге → [01-account.md](01-account.md)
+2. Создать базу MySQL → [02-database.md](02-database.md)
+3. Скачать WordPress, загрузить ZIP → [03-wordpress.md](03-wordpress.md)
+4. Мастер установки в браузере → [03-wordpress.md](03-wordpress.md)
+5. Войти в админку → [04-launch.md](04-launch.md)
+
+**Проблемы:** [troubleshooting.md](troubleshooting.md)
+
+---
+
+## Шпаргалка (заполните)
+
+| Параметр | Ваше значение |
+|----------|----------------|
+| URL сайта | `http://...` |
+| DB_NAME | |
+| DB_USER | |
+| DB_PASSWORD | |
+| DB_HOST | |
+| Логин WP | |
+| Пароль WP | |
+
+---
+
+**[Начать шаг 1 →](01-account.md)**

@@ -1,6 +1,7 @@
 # 01. Подготовка
 
-[← Часть 1](README.md) | [Далее: MAMP →](02-mamp.md)
+Вы здесь: [Часть 1](README.md) · **Шаг 1 из 3** · [Далее →](02-mamp.md)  
+Если ошибка → [troubleshooting.md](troubleshooting.md)
 
 ---
 
@@ -51,4 +52,4 @@
 
 ---
 
-[Далее: MAMP →](02-mamp.md)
+**[Далее: шаг 2 — MAMP →](02-mamp.md)**
