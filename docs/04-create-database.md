@@ -1,83 +1,89 @@
-# 04. База данных
+# 04. Создание базы данных
 
 [← Настройка MAMP](03-configure-mamp.md) | [Назад к оглавлению](../README.md) | [Далее: Установка WordPress →](05-install-wordpress.md)
 
-WordPress хранит весь контент в базе данных MySQL. Создадим её через phpMyAdmin — веб-интерфейс, который идёт в комплекте с MAMP.
+WordPress хранит весь контент в базе данных MySQL. Сейчас запустим серверы и создадим пустую базу.
 
 ---
 
-## Шаг 1. Открыть phpMyAdmin
+## Шаг 1. Запустить серверы
 
-1. Убедитесь, что MAMP запущен (серверы **Start**)
-2. Откройте браузер
-3. Перейдите: [http://localhost:8888/phpMyAdmin/](http://localhost:8888/phpMyAdmin/)
+1. В главном окне MAMP нажмите **Start**
+2. Дождитесь, пока индикаторы Apache и MySQL станут зелёными
+3. Автоматически откроется страница WebStart в браузере:
 
-<!-- TODO: заменить placeholder на реальный скриншот -->
-![Вход в phpMyAdmin](../assets/images/04-create-database/phpmyadmin-login.png)
+   ```
+   http://localhost/MAMP/?language=English
+   ```
 
-*Рис. 1 — Страница входа в phpMyAdmin*
+   Язык страницы может отличаться — это не важно.
 
----
-
-## Шаг 2. Войти
-
-Используйте стандартные учётные данные MAMP:
-
-| Поле | Значение |
-|------|----------|
-| Username | `root` |
-| Password | `root` |
-
-Нажмите **Go** (или **Вперёд**).
-
-> Если пароль не подходит — проверьте, что MySQL запущен в MAMP. Пароль можно сбросить в **MAMP → Preferences → MySQL**.
+> Если страница не открылась — перейдите вручную по адресу `http://localhost/MAMP/`.
 
 ---
 
-## Шаг 3. Создать базу данных
+## Шаг 2. Открыть phpMyAdmin
 
-1. В верхнем меню нажмите **Databases** (Базы данных)
-2. В поле **Create database** введите имя: `wordpress_local`
-3. В выпадающем списке **Collation** выберите: `utf8mb4_unicode_ci`
-4. Нажмите **Create**
+На странице WebStart найдите выпадающий список **MySQL** и выберите **phpMyAdmin**:
 
-<!-- TODO: заменить placeholder на реальный скриншот -->
-![Создание базы данных](../assets/images/04-create-database/create-database.png)
+![WebStart — переход в phpMyAdmin](../assets/images/04-create-database/mamp-webstart-phpmyadmin.png)
 
-*Рис. 2 — Форма создания базы данных wordpress_local*
+*Рис. 1 — На странице MAMP WebStart: MySQL → phpMyAdmin*
 
-<details>
-<summary>Подробнее: зачем utf8mb4_unicode_ci?</summary>
-
-`utf8mb4` — кодировка, которая корректно хранит emoji и символы всех языков. `unicode_ci` — правило сортировки для Unicode. WordPress рекомендует именно эту кодировку.
-</details>
-
----
-
-## Шаг 4. Проверка
-
-После создания база `wordpress_local` появится в списке слева.
-
-<!-- TODO: заменить placeholder на реальный скриншот -->
-![Список баз данных](../assets/images/04-create-database/database-list.png)
-
-*Рис. 3 — wordpress_local в списке баз данных phpMyAdmin*
-
-База пока пустая — WordPress сам создаст нужные таблицы при установке.
-
----
-
-## Что запомнить
+На этой же странице указаны учётные данные для подключения:
 
 | Параметр | Значение |
 |----------|----------|
-| Имя базы | `wordpress_local` |
-| Пользователь | `root` |
-| Пароль | `root` |
-| Host (для WordPress) | `localhost:8889` |
+| Host | `localhost` / `127.0.0.1` |
+| Port | `3306` |
+| Username | `root` |
+| Password | `root` |
 
-Эти данные понадобятся на следующем шаге — при установке WordPress.
+Эти данные понадобятся при установке WordPress.
 
 ---
+
+## Шаг 3. Создать новую базу данных
+
+В левой панели phpMyAdmin нажмите **New** (вверху списка баз):
+
+![phpMyAdmin — New](../assets/images/04-create-database/phpmyadmin-new.png)
+
+*Рис. 2 — Боковое меню phpMyAdmin: нажмите New*
+
+---
+
+## Шаг 4. Ввести имя и создать
+
+1. В поле **Database name** введите имя базы, например:
+
+   ```
+   wordpress
+   ```
+
+2. В выпадающем списке кодировки выберите `utf8mb4_unicode_ci` (рекомендуется) или `utf8_general_ci`
+3. Нажмите **Create**
+
+![Создание базы данных](../assets/images/04-create-database/create-database.png)
+
+*Рис. 3 — Ввод имени базы данных и нажатие Create*
+
+> **Совет:** запомните или запишите имя базы — оно понадобится на следующем шаге. Можно использовать любое имя латиницей, например `wordpress`, `wp_local`, `my_site`.
+
+> **Почему utf8mb4?** Кодировка `utf8mb4_unicode_ci` поддерживает все символы Unicode, включая эмодзи. `utf8_general_ci` тоже работает для локальной разработки.
+
+---
+
+## Итого
+
+| Параметр | Значение |
+|----------|----------|
+| Имя базы | то, что вы ввели (например `wordpress`) |
+| Пользователь | `root` |
+| Пароль | `root` |
+| Сервер (host) | `localhost` |
+| Порт | `3306` |
+
+База создана. Переходим к установке WordPress.
 
 [Далее: Установка WordPress →](05-install-wordpress.md)

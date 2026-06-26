@@ -8,10 +8,9 @@
 
 Этот репозиторий — подробная инструкция для запуска WordPress локально на Mac. Никакого хостинга и домена не нужно: всё работает прямо на вашем компьютере через **MAMP Free**.
 
-<!-- TODO: заменить placeholder на реальный скриншот -->
-![Работающий WordPress-сайт](assets/images/06-first-launch/site-running.png)
+![WordPress установлен](assets/images/06-first-launch/wp-install-success.png)
 
-*Рис. 1 — Итоговый результат: WordPress-сайт открыт в браузере*
+*Рис. 1 — Итоговый результат: WordPress успешно установлен*
 
 ---
 
@@ -19,13 +18,22 @@
 
 | Шаг | Действие | Раздел |
 |-----|----------|--------|
-| 1 | Установить MAMP | [docs/02-install-mamp.md](docs/02-install-mamp.md) |
-| 2 | Запустить серверы | [docs/03-configure-mamp.md](docs/03-configure-mamp.md) |
-| 3 | Создать базу данных | [docs/04-create-database.md](docs/04-create-database.md) |
-| 4 | Установить WordPress | [docs/05-install-wordpress.md](docs/05-install-wordpress.md) |
-| 5 | Открыть сайт | [docs/06-first-launch.md](docs/06-first-launch.md) |
+| 1 | Скачать MAMP и WordPress | [docs/01-prerequisites.md](docs/01-prerequisites.md) |
+| 2 | Установить MAMP | [docs/02-install-mamp.md](docs/02-install-mamp.md) |
+| 3 | Настроить MAMP (Apache, порты, htdocs) | [docs/03-configure-mamp.md](docs/03-configure-mamp.md) |
+| 4 | Создать базу данных | [docs/04-create-database.md](docs/04-create-database.md) |
+| 5 | Установить WordPress | [docs/05-install-wordpress.md](docs/05-install-wordpress.md) |
+| 6 | Войти в админку | [docs/06-first-launch.md](docs/06-first-launch.md) |
 
-Перед началом рекомендуем прочитать раздел [Подготовка](docs/01-prerequisites.md) — там системные требования и полезные ссылки.
+---
+
+## Видеоматериал
+
+Если удобнее смотреть, а не читать — есть видео по той же теме:
+
+**[Установка WordPress на MAMP (YouTube)](https://www.youtube.com/watch?v=OwnwrO6Ub28&t=1s)**
+
+Текстовый гайд в этом репозитории дополняет видео: здесь есть пояснения «почему именно так», таблицы и решение типичных проблем.
 
 ---
 
@@ -34,7 +42,7 @@
 - **macOS** 12 Monterey или новее (Apple Silicon или Intel)
 - **~500 МБ** свободного места на диске
 - **Браузер** (Safari, Chrome, Firefox — любой)
-- **Интернет** — только для скачивания MAMP и WordPress
+- **Интернет** — для скачивания MAMP и WordPress
 
 ---
 
@@ -46,24 +54,26 @@ flowchart LR
         A[Скачать MAMP]
         B[Скачать WordPress]
     end
-    subgraph mamp [MAMP]
-        C[Установить MAMP]
-        D[Запустить Apache + MySQL]
+    subgraph mamp [Настройка MAMP]
+        C[Apache + PHP]
+        D["Порты 80 и 3306"]
+        E[Открыть htdocs]
     end
     subgraph db [База данных]
-        E[phpMyAdmin]
-        F[Создать БД]
+        F[Start серверов]
+        G[phpMyAdmin]
+        H[Создать БД]
     end
     subgraph wp [WordPress]
-        G[Распаковать в htdocs]
-        H[wp-config.php]
-        I[Мастер установки]
+        I[Распаковать в htdocs]
+        J[Мастер установки]
+        K[Войти в админку]
     end
-    A --> C --> D
-    D --> E --> F
-    B --> G --> H --> I
-    F --> H
-    I --> J[Сайт работает]
+    A --> C --> D --> E
+    B --> I
+    E --> F --> G --> H
+    H --> J
+    I --> J --> K
 ```
 
 ---
@@ -72,37 +82,36 @@ flowchart LR
 
 | № | Раздел | Описание |
 |---|--------|----------|
-| 01 | [Подготовка](docs/01-prerequisites.md) | Системные требования, что такое MAMP и WordPress |
+| 01 | [Подготовка](docs/01-prerequisites.md) | Ссылки на скачивание, видео, что понадобится |
 | 02 | [Установка MAMP](docs/02-install-mamp.md) | Скачивание и установка MAMP Free |
-| 03 | [Настройка MAMP](docs/03-configure-mamp.md) | Запуск серверов, порты, папка htdocs |
-| 04 | [База данных](docs/04-create-database.md) | Создание БД через phpMyAdmin |
-| 05 | [Установка WordPress](docs/05-install-wordpress.md) | Распаковка файлов, wp-config, мастер установки |
-| 06 | [Первый запуск](docs/06-first-launch.md) | Открытие сайта и вход в админку |
+| 03 | [Настройка MAMP](docs/03-configure-mamp.md) | Apache, PHP, порты 80/3306, папка htdocs |
+| 04 | [База данных](docs/04-create-database.md) | Запуск серверов, phpMyAdmin, создание БД |
+| 05 | [Установка WordPress](docs/05-install-wordpress.md) | Распаковка файлов, подключение к БД |
+| 06 | [Первый запуск](docs/06-first-launch.md) | Завершение установки и вход в админку |
 | 99 | [Решение проблем](docs/99-troubleshooting.md) | Частые ошибки и их исправление |
 
 ---
 
-## Важные параметры MAMP
+## Важные параметры
 
-Эти значения используются на протяжении всего гайда — сохраните их под рукой:
+Эти значения используются на протяжении всего гайда:
 
 | Параметр | Значение |
 |----------|----------|
-| Apache (веб-сервер) | `http://localhost:8888` |
-| MySQL (база данных) | порт `8889` |
-| phpMyAdmin | `http://localhost:8888/phpMyAdmin/` |
+| Сайт | `http://localhost/название-вашей-папки/` |
+| Apache (веб-сервер) | порт `80` |
+| MySQL (база данных) | порт `3306` |
+| phpMyAdmin | `http://localhost/phpMyAdmin/` |
 | Папка сайтов (htdocs) | `/Applications/MAMP/htdocs/` |
 | Логин MySQL | `root` |
 | Пароль MySQL | `root` |
-| Database Host в WordPress | `localhost:8889` |
-
-> **Важно:** в WordPress указывайте `localhost:8889`, а не просто `localhost` — иначе подключение к базе не сработает.
+| Database Host в WordPress | `localhost` |
 
 ---
 
 ## Частые проблемы
 
-Столкнулись с ошибкой? Загляните в [docs/99-troubleshooting.md](docs/99-troubleshooting.md) — там собраны типичные ситуации и их решения.
+Столкнулись с ошибкой? Загляните в [docs/99-troubleshooting.md](docs/99-troubleshooting.md) — там собраны типичные ситуации, в том числе если порт 80 или 3306 уже занят.
 
 ---
 
