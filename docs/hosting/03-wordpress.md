@@ -7,36 +7,31 @@
 
 ## Сделайте
 
-### Скачать и загрузить WordPress
+### Файлы на сервер
 
-1. На Mac скачайте WordPress: [ru.wordpress.org/download](https://ru.wordpress.org/download/)
-2. Распакуйте ZIP — внутри папка `wordpress` с файлами
-3. Снова **сожмите** содержимое `wordpress` в один ZIP (или сожмите саму папку)
-4. Панель → **File Manager** → корень сайта (`public_html`)
-5. **Upload** → выберите ZIP → дождитесь 100%
-6. **Extract** / **Распаковать**
-7. Убедитесь: в `public_html` лежит `index.php` (не вложенная `wordpress/wordpress/`)
+1. Скачайте [WordPress на русском](https://ru.wordpress.org/download/) — архив `wordpress-x.x.x-ru_RU.zip`
+2. Панель → **File Manager** → `public_html`
+3. **Upload** → выберите ZIP → **Extract** / **Распаковать**
+4. Если файлы оказались в `public_html/wordpress/` — **переместите содержимое** в `public_html/` (должен лежать `index.php` в корне)
 
-### Мастер установки в браузере
+### Мастер установки
 
-8. Откройте **URL вашего сайта** (из [шага 1](01-account.md))
-9. Выберите язык **Русский** → **Продолжить**
-10. **Вперёд!** → форма базы данных:
+5. Браузер → **URL сайта** ([шаг 1](01-account.md))
+6. Язык **Русский** → **Продолжить** → **Вперёд!**
+7. База данных — значения из [шага 2](02-database.md):
 
 | Поле | Значение |
 |------|----------|
-| Имя базы данных | DB_NAME из [шага 2](02-database.md) |
-| Имя пользователя | DB_USER |
+| Имя базы | DB_NAME |
+| Пользователь | DB_USER |
 | Пароль | DB_PASSWORD |
-| Сервер базы данных | DB_HOST |
-| Префикс таблиц | `wp_` |
+| Сервер | DB_HOST |
+| Префикс | `wp_` |
 
-11. **Отправить** → **Запустить установку**
-12. Заполните название сайта, **логин администратора**, пароль, email
-13. **Установить WordPress**
+8. **Отправить** → **Запустить установку**
+9. Название сайта, логин, пароль, email → **Установить WordPress**
 
-<!-- TODO: скриншоты -->
-<!-- ![Мастер установки](../../assets/images/hosting/03-wordpress/wp-install-wizard.png) -->
+<!-- TODO: скрин wp-install-wizard.png в assets/images/hosting/03-wordpress/ -->
 
 **Проверка:** экран «Поздравляем!» или кнопка **Войти**.
 
@@ -45,15 +40,9 @@
 ## Пояснение
 
 <details>
-<summary>Отличие от Части 1 (MAMP)</summary>
+<summary>Отличие от Части 1</summary>
 
-Тот же мастер WordPress, но файлы на **сервере хостинга**, а данные БД — из панели, не `root`/`root`.
-</details>
-
-<details>
-<summary>Лишняя папка wordpress</summary>
-
-Если URL стал `http://домен.com/wordpress/` — переместите файлы из `wordpress/` в `public_html/`.
+Тот же мастер WordPress, но файлы на сервере хостинга, а БД — из панели (не `root`/`root` с MAMP).
 </details>
 
 ---
@@ -62,9 +51,9 @@
 
 | Симптом | Куда |
 |---------|------|
-| Ошибка соединения с БД | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
-| 404 на сайте | [troubleshooting.md#page-404](troubleshooting.md#page-404) |
+| Ошибка БД | [migrate/troubleshooting.md#db-connection](../migrate/troubleshooting.md#db-connection) |
+| 404 | [migrate/troubleshooting.md#permalinks-404](../migrate/troubleshooting.md#permalinks-404) |
 
 ---
 
-**[Далее: шаг 4 — первый запуск →](04-launch.md)**
+**[Далее: шаг 4 →](04-launch.md)**

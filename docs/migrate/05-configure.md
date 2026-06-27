@@ -25,8 +25,7 @@ define( 'DB_HOST', 'значение_из_панели' );
 6. **Save** / **Сохранить**
 7. Откройте в браузере адрес сайта с [шага 2](02-hosting.md)
 
-<!-- TODO: скриншот -->
-<!-- ![Редактирование wp-config](../../assets/images/migrate/05-configure/edit-wp-config.png) -->
+<!-- TODO: скрин edit-wp-config.png в assets/images/migrate/05-configure/ -->
 
 ### Часть B. Замена URL (localhost → домен)
 

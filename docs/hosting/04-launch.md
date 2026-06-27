@@ -43,8 +43,8 @@
 
 | Симптом | Куда |
 |---------|------|
-| 404 на страницах | [troubleshooting.md#permalinks-404](troubleshooting.md#permalinks-404) |
-| Белый экран | [troubleshooting.md#white-screen](troubleshooting.md#white-screen) |
+| 404 на страницах | [migrate/troubleshooting.md#permalinks-404](../migrate/troubleshooting.md#permalinks-404) |
+| Белый экран | [migrate/troubleshooting.md#white-screen](../migrate/troubleshooting.md#white-screen) |
 
 ---
 

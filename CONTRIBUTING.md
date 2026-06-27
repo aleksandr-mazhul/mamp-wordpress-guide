@@ -23,7 +23,7 @@ docs/hosting/   — Часть 3 (установка на хостинге)
 ```markdown
 # NN. Заголовок
 
-Вы здесь: [Часть N](README.md) · **Шаг X из M** · [← Назад](prev.md) · [Далее →](next.md)
+Вы здесь: [Часть N](README.md) · **Шаг X из M** · [← Назад](prev-step.md) · [Далее →](next-step.md)
 Если ошибка → [troubleshooting.md](troubleshooting.md)
 
 ---
@@ -50,7 +50,7 @@ docs/hosting/   — Часть 3 (установка на хостинге)
 
 | Симптом | Куда |
 |---------|------|
-| ... | [local/troubleshooting.md#anchor-id](../docs/local/troubleshooting.md#anchor-id) |
+| ... | `troubleshooting.md#anchor-id` |
 ```
 
 Правила:

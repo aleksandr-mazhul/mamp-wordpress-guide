@@ -35,8 +35,7 @@
 
 > **DB_HOST** — скопируйте из панели. Не ставьте `localhost` по привычке с MAMP, если панель показывает другое (например `sql123.hosting.com`).
 
-<!-- TODO: скриншот -->
-<!-- ![Создание MySQL базы](../../assets/images/migrate/04-database/create-mysql-database.png) -->
+<!-- TODO: скрины create-mysql-database.png, phpmyadmin-import.png в assets/images/migrate/04-database/ -->
 
 ### Импорт SQL через phpMyAdmin
 
@@ -47,9 +46,6 @@
 10. Формат: **SQL** (обычно определяется сам)
 11. Нажмите **Вперёд** (Go) внизу страницы
 12. Дождитесь сообщения об успехе — слева появятся таблицы `wp_*`
-
-<!-- TODO: скриншот -->
-<!-- ![Импорт SQL в phpMyAdmin](../../assets/images/migrate/04-database/phpmyadmin-import.png) -->
 
 **Проверка:** база не пустая, есть таблицы `wp_posts`, `wp_options` и др.; блокнот с 4 полями БД заполнен.
 

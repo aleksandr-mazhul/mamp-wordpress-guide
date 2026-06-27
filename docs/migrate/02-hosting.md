@@ -37,8 +37,7 @@
 9. Найдите **File Manager** / **Файловый менеджер**
 10. Найдите кнопку **phpMyAdmin** (часто в том же блоке, что и MySQL)
 
-<!-- TODO: скриншот -->
-<!-- ![Обзор панели хостинга](../../assets/images/migrate/02-hosting/panel-overview.png) -->
+<!-- TODO: скрин panel-overview.png в assets/images/migrate/02-hosting/ -->
 
 **Проверка:** вы вошли в панель, знаете URL сайта и где лежат MySQL, File Manager и phpMyAdmin.
 

@@ -99,8 +99,4 @@ flowchart TB
 
 ---
 
-## Дальше
-
-**[Часть 2: перенос на хостинг →](../migrate/README.md)**
-
-[← Часть 1](README.md)
+**[Часть 2: перенос на хостинг →](../migrate/README.md)** · [← Часть 1](README.md)

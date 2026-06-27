@@ -7,14 +7,11 @@
 
 ## Сделайте
 
-> Здесь создаём **пустую** базу. Импорт SQL с Mac **не нужен** — это не перенос ([Часть 2](../migrate/README.md)).
+Создайте **пустую** базу — те же действия, что в [migrate/04-database.md](../migrate/04-database.md), пункты **1–6** (создание БД и пользователя).
 
-1. Панель → **MySQL Databases** / **Базы данных**
-2. **Create Database** → имя латиницей (например `my_wp_db`) → **Create**
-3. **Скопируйте полное имя** базы из панели
-4. **Create User** → логин + пароль → **Create** → **запишите**
-5. **Add User to Database** → все привилегии (**ALL PRIVILEGES**) → **Save**
-6. Найдите **DB_HOST** в блоке Database details / Сведения о БД
+**Не выполняйте** импорт SQL (пункты 7–12 в том файле) — это только для переноса с Mac.
+
+Запишите четыре поля:
 
 | Поле | Ваше значение |
 |------|----------------|
@@ -23,20 +20,7 @@
 | DB_PASSWORD | |
 | DB_HOST | |
 
-<!-- TODO: скриншот -->
-<!-- ![Создание базы](../../assets/images/hosting/02-database/create-database.png) -->
-
-**Проверка:** база создана, таблиц `wp_*` **ещё нет** (пустая) — их создаст мастер WordPress на следующем шаге.
-
----
-
-## Пояснение
-
-<details>
-<summary>DB_HOST не всегда localhost</summary>
-
-Копируйте значение из панели хостинга, не из памяти про MAMP.
-</details>
+**Проверка:** база пустая (нет таблиц `wp_*`) — их создаст мастер WordPress на следующем шаге.
 
 ---
 
@@ -44,8 +28,8 @@
 
 | Симптом | Куда |
 |---------|------|
-| Не создаётся база | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
+| Ошибка при создании | [migrate/troubleshooting.md#db-connection](../migrate/troubleshooting.md#db-connection) |
 
 ---
 
-**[Далее: шаг 3 — установка WordPress →](03-wordpress.md)**
+**[Далее: шаг 3 →](03-wordpress.md)**

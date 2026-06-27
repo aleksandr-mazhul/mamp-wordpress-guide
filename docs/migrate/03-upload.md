@@ -37,8 +37,7 @@
 10. Убедитесь: в корне лежит **`index.php`**, папки `wp-admin`, `wp-content`, `wp-includes`
 11. (Опционально) Удалите ZIP с сервера
 
-<!-- TODO: скриншот -->
-<!-- ![File Manager — загрузка ZIP](../../assets/images/migrate/03-upload/file-manager-upload.png) -->
+<!-- TODO: скрин file-manager-upload.png в assets/images/migrate/03-upload/ -->
 
 **Проверка:** в `public_html` (или аналоге) есть `index.php` **напрямую**, не в `public_html/wordpress/wordpress/`.
 

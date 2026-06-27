@@ -1,81 +1,54 @@
-# Часть 2: Перенос сайта с localhost на хостинг
+# Часть 2: Перенос с localhost на хостинг
 
 [← К оглавлению репозитория](../../README.md)
 
-Вы прошли [Часть 1](../local/03-wordpress.md) — WordPress работает на Mac. Перенесём **готовый** сайт в интернет.
+Нужен **работающий** сайт на `localhost` (например после [Части 1](../local/README.md)). Переносим файлы + базу на хостинг.
+
+Ошибки → [troubleshooting.md](troubleshooting.md)
 
 ---
 
 ## Выбор способа
 
-| Путь | Кому | Старт |
-|------|------|-------|
-| **Ручной** (рекомендуем) | Первый раз, хотите понять устройство сайта | [Шаг 1 →](01-prepare.md) |
-| **Через плагин** | Маленький сайт, нужно быстрее | [appendix-plugin.md](appendix-plugin.md) *(отдельная ветка, не шаги 1–6)* |
-
-Ошибки на любом шаге → [troubleshooting.md](troubleshooting.md)
-
----
-
-## Маршрут (ручной путь)
+| Путь | Старт |
+|------|-------|
+| **Ручной** (рекомендуем) | [Шаг 1 →](01-prepare.md) |
+| **Плагин** (маленький сайт) | [appendix-plugin.md](appendix-plugin.md) — *отдельная ветка, не шаги 1–6* |
 
 ```mermaid
 flowchart TD
-    start[Шаг 1: Подготовка Mac] --> h[Шаг 2: Аккаунт хостинга]
-    h --> fork{Загрузка файлов?}
-    fork -->|File Manager| u[Шаг 3: Upload ZIP]
+    s1[1 Mac: бэкап и SQL] --> s2[2 Хостинг: аккаунт]
+    s2 --> fork{Файлы?}
+    fork -->|ZIP| s3[3 Upload]
     fork -->|FTP| ftp[appendix-ftp]
-    u --> d[Шаг 4: БД и импорт SQL]
-    d --> c[Шаг 5: wp-config и URL]
-    c --> ok[Шаг 6: Проверка]
-    ok --> done[Сайт онлайн]
+    s3 --> s4[4 БД и импорт]
+    ftp --> s4
+    s4 --> s5[5 wp-config и URL]
+    s5 --> s6[6 Проверка]
 ```
 
 ---
 
-## Все шаги
+## Шаги (ручной путь)
 
 | Шаг | Файл | Содержание |
 |-----|------|------------|
-| 1 | [01-prepare.md](01-prepare.md) | Бэкап Mac, экспорт SQL |
-| 2 | [02-hosting.md](02-hosting.md) | Регистрация, вход в панель |
-| 3 | [03-upload.md](03-upload.md) | File Manager + ZIP *(или [FTP](appendix-ftp.md))* |
-| 4 | [04-database.md](04-database.md) | Создание БД, импорт SQL |
-| 5 | [05-configure.md](05-configure.md) | wp-config + замена URL |
+| 1 | [01-prepare.md](01-prepare.md) | Бэкап, экспорт SQL, записать localhost URL |
+| 2 | [02-hosting.md](02-hosting.md) | Регистрация, панель, где MySQL / File Manager |
+| 3 | [03-upload.md](03-upload.md) | ZIP в File Manager *(или [FTP](appendix-ftp.md))* |
+| 4 | [04-database.md](04-database.md) | Создать БД, импорт `.sql` |
+| 5 | [05-configure.md](05-configure.md) | `wp-config.php`, замена URL |
 | 6 | [06-check.md](06-check.md) | Финальная проверка |
-
-### Альтернативы и справочник
-
-| Файл | Когда |
-|------|-------|
-| [appendix-ftp.md](appendix-ftp.md) | Вместо шага 3 — загрузка через FileZilla |
-| [appendix-plugin.md](appendix-plugin.md) | Вместо всего ручного пути 1–6 |
-| [troubleshooting.md](troubleshooting.md) | Ошибки при переносе |
-
----
-
-## Чеклист за 10 минут
-
-1. Бэкап + экспорт SQL → [01-prepare.md](01-prepare.md)
-2. Аккаунт и панель хостинга → [02-hosting.md](02-hosting.md)
-3. ZIP → File Manager → распаковать → [03-upload.md](03-upload.md)
-4. Создать БД, импорт SQL → [04-database.md](04-database.md)
-5. Правка `wp-config.php` → [05-configure.md](05-configure.md)
-6. Замена URL → [05-configure.md](05-configure.md)
-7. Финальная проверка → [06-check.md](06-check.md)
 
 ---
 
 ## Шпаргалка (заполните при переносе)
 
-| Параметр | Локально (было) | Хостинг (стало) |
-|----------|-----------------|-----------------|
-| URL сайта | `http://localhost/папка/` | |
-| Папка файлов | `/Applications/MAMP/htdocs/папка/` | `public_html` |
-| DB_NAME | имя в phpMyAdmin Mac | из панели |
-| DB_USER | `root` | из панели |
-| DB_PASSWORD | `root` | из панели |
-| DB_HOST | `localhost` | **из панели** |
+| Параметр | Локально | Хостинг |
+|----------|----------|---------|
+| URL | `http://localhost/папка/` | |
+| Файлы | `/Applications/MAMP/htdocs/папка/` | `public_html` |
+| DB_NAME / USER / PASSWORD / HOST | phpMyAdmin Mac: `root`/`root` | **все 4 поля из панели** |
 
 ---
 
