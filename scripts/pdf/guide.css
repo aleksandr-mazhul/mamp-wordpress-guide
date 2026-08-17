@@ -1,0 +1,318 @@
+/* WordPress guide - PDF styles */
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+
+  @bottom-left {
+    content: "WordPress · Гайд";
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 9pt;
+    color: #666;
+  }
+
+  @bottom-right {
+    content: counter(page);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 9pt;
+    color: #666;
+  }
+}
+
+@page :first {
+  margin: 0;
+
+  @bottom-left {
+    content: none;
+  }
+
+  @bottom-right {
+    content: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide pandoc auto title (cover page is used instead) */
+header#title-block-header {
+  display: none;
+}
+
+.cover-page {
+  width: 210mm;
+  min-height: 297mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #f8fafc 0%, #e8f0f8 50%, #f0f4f8 100%);
+  page-break-after: always;
+  margin: 0;
+  padding: 0;
+}
+
+.cover-inner {
+  text-align: center;
+  padding: 40mm 25mm;
+}
+
+.cover-part {
+  font-size: 12pt;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #3d8fc6;
+  margin: 0 0 12mm;
+  font-weight: 600;
+}
+
+.cover-title {
+  font-size: 28pt;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8mm;
+  line-height: 1.2;
+}
+
+.cover-subtitle {
+  font-size: 13pt;
+  color: #444;
+  margin: 0 0 16mm;
+  max-width: 140mm;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cover-badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16mm;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 10pt;
+  font-weight: 600;
+  background: #21759b;
+  color: #fff;
+}
+
+.badge:first-child {
+  background: #333;
+}
+
+.badge:nth-child(2) {
+  background: #3d8fc6;
+}
+
+.cover-meta {
+  font-size: 10pt;
+  color: #666;
+  margin: 0;
+}
+
+.page-break {
+  page-break-after: always;
+}
+
+/* Typography */
+h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #111;
+  margin: 1.2em 0 0.6em;
+  page-break-after: avoid;
+}
+
+h1:first-of-type {
+  page-break-before: avoid;
+}
+
+h2 {
+  font-size: 15pt;
+  font-weight: 600;
+  color: #222;
+  margin: 1.4em 0 0.5em;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #ddd;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #333;
+  margin: 1.1em 0 0.4em;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 11pt;
+  font-weight: 600;
+  margin: 1em 0 0.3em;
+}
+
+p {
+  margin: 0.5em 0;
+  orphans: 3;
+  widows: 3;
+}
+
+a {
+  color: #21759b;
+  text-decoration: none;
+}
+
+/* Table of contents */
+#TOC {
+  page-break-after: always;
+  margin-bottom: 2em;
+}
+
+#TOC > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#TOC ul ul {
+  padding-left: 1.2em;
+}
+
+#TOC li {
+  margin: 0.25em 0;
+  line-height: 1.4;
+}
+
+#TOC a {
+  color: #333;
+}
+
+nav::before {
+  content: "Оглавление";
+  display: block;
+  font-size: 18pt;
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: #111;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 10pt;
+  page-break-inside: avoid;
+}
+
+thead {
+  background: #f0f4f8;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Code */
+code {
+  font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  background: #f5f5f5;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 9pt;
+  line-height: 1.45;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  page-break-inside: avoid;
+}
+
+/* Lists */
+ul,
+ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.25em 0;
+}
+
+/* Blockquote */
+blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #3d8fc6;
+  background: #f8fafc;
+  color: #444;
+  font-style: italic;
+}
+
+/* Horizontal rule between sections */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+/* Checklist */
+input[type="checkbox"] {
+  margin-right: 0.4em;
+}
+
+/* Section breaks - start major h1 sections on new page after TOC */
+body > h1:nth-of-type(n+2) {
+  page-break-before: always;
+}
+
+/* Strong emphasis */
+strong {
+  font-weight: 600;
+}

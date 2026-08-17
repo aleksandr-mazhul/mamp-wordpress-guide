@@ -40,3 +40,29 @@ docs/hosting/   4 шага + troubleshooting
 ```
 
 [Полный указатель](docs/README.md) · [Как дополнять гайд](CONTRIBUTING.md) · [LICENSE](LICENSE)
+
+---
+
+## PDF-гайды
+
+Готовые PDF собираются из markdown в `docs/` без изменения исходников.
+
+**Локальный гайд (Часть 1):** [`output/pdf/01-wordpress-local-mamp.pdf`](output/pdf/01-wordpress-local-mamp.pdf)
+
+**Перенос на хостинг (Часть 2):** [`output/pdf/02-wordpress-migrate.pdf`](output/pdf/02-wordpress-migrate.pdf)
+
+**Установка на хостинге (Часть 3):** [`output/pdf/03-wordpress-hosting.pdf`](output/pdf/03-wordpress-hosting.pdf)
+
+### Как собрать PDF
+
+```bash
+brew install pandoc poppler
+npm install
+bash scripts/build-local-pdf.sh    # Часть 1
+bash scripts/build-migrate-pdf.sh  # Часть 2
+bash scripts/build-hosting-pdf.sh  # Часть 3
+# или все сразу:
+bash scripts/build-all-pdfs.sh
+```
+
+Результаты в `output/pdf/`: `01-wordpress-local-mamp.pdf`, `02-wordpress-migrate.pdf`, `03-wordpress-hosting.pdf`

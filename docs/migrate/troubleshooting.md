@@ -15,6 +15,21 @@ flowchart TD
 
 ---
 
+<a id="phpmyadmin-local"></a>
+
+## phpMyAdmin не открывается на Mac
+
+**Симптом:** на шаге 1 не удаётся открыть phpMyAdmin для экспорта базы.
+
+**Решение:**
+
+1. MAMP → **Start** — Apache и MySQL зелёные
+2. Попробуйте `http://localhost/phpMyAdmin/`
+3. Или `http://localhost/MAMP/` → MySQL → **phpMyAdmin**
+4. Порт Apache в MAMP = `80` (см. PDF «WordPress на Mac через MAMP», Часть 1)
+
+---
+
 <a id="panel-sections"></a>
 
 ## Не нахожу раздел в панели хостинга

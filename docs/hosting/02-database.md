@@ -28,7 +28,7 @@
 
 | Симптом | Куда |
 |---------|------|
-| Ошибка при создании | [migrate/troubleshooting.md#db-connection](../migrate/troubleshooting.md#db-connection) |
+| Ошибка при создании | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
 
 ---
 

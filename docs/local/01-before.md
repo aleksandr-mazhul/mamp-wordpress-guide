@@ -30,7 +30,7 @@ MAMP превращает Mac в локальный сервер. Скачива
 
 | Симптом | Куда |
 |---------|------|
-| macOS блокирует MAMP | [troubleshooting.md#apache-wont-start](troubleshooting.md#apache-wont-start) |
+| macOS блокирует MAMP | [troubleshooting.md#macos-gatekeeper](troubleshooting.md#macos-gatekeeper) |
 
 ---
 

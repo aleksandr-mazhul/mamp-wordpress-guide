@@ -67,7 +67,7 @@ flowchart LR
 | Симптом | Куда |
 |---------|------|
 | Экспортировали не ту базу | Имя слева в phpMyAdmin = `DB_NAME` в `wp-config.php` |
-| phpMyAdmin не открывается | [local/troubleshooting.md#phpmyadmin](../local/troubleshooting.md#phpmyadmin) |
+| phpMyAdmin не открывается | [troubleshooting.md#phpmyadmin-local](troubleshooting.md#phpmyadmin-local) |
 
 ---
 

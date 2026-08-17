@@ -3,3 +3,7 @@
 .idea/
 .vscode/
 .venv/
+tmp/
+node_modules/
+output/pdf/*.pdf
+scripts/pdf/__pycache__/

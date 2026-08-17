@@ -51,8 +51,8 @@
 
 | Симптом | Куда |
 |---------|------|
-| Ошибка БД | [migrate/troubleshooting.md#db-connection](../migrate/troubleshooting.md#db-connection) |
-| 404 | [migrate/troubleshooting.md#permalinks-404](../migrate/troubleshooting.md#permalinks-404) |
+| Ошибка БД | [troubleshooting.md#db-connection](troubleshooting.md#db-connection) |
+| 404 | [troubleshooting.md#permalinks-404](troubleshooting.md#permalinks-404) |
 
 ---
 

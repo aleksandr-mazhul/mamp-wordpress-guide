@@ -21,7 +21,7 @@
 
 | Симптом | Куда |
 |---------|------|
-| Не вижу разделов панели | [migrate/troubleshooting.md#panel-sections](../migrate/troubleshooting.md#panel-sections) |
+| Не вижу разделов панели | [troubleshooting.md#panel-sections](troubleshooting.md#panel-sections) |
 
 ---
 

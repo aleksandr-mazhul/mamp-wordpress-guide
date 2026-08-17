@@ -1,0 +1,13 @@
+{
+  "name": "mamp-wordpress-guide",
+  "private": true,
+  "scripts": {
+    "build:local-pdf": "bash scripts/build-local-pdf.sh",
+    "build:migrate-pdf": "bash scripts/build-migrate-pdf.sh",
+    "build:hosting-pdf": "bash scripts/build-hosting-pdf.sh",
+    "build:all-pdfs": "bash scripts/build-all-pdfs.sh"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^11.4.2"
+  }
+}
